@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Barcode_QRcode_Generater_Swift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-C1-44J">
+                                <rect key="frame" x="125.00000000000003" y="174" width="124" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="SQb-KD-64a"/>
+                                    <constraint firstAttribute="height" constant="30" id="xYp-NZ-Xs4"/>
+                                </constraints>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="GenerateBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEU-8N-k63"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O30-X7-YD1">
+                                <rect key="frame" x="13" y="112" width="346" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="eFB-By-Qhc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="zyp-Fo-Hk5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="BarCode"/>
+                                    <segment title="QRCode"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5Z-3d-7z7">
+                                <rect key="frame" x="10" y="59" width="349" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="U12-D8-E5a"/>
+                                    <constraint firstAttribute="width" constant="349" id="cRL-VB-h3J"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIy-FF-EQk">
+                                <rect key="frame" x="16" y="236" width="343" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82671412066558503" green="0.93721195853711492" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oaq-C1-44J" secondAttribute="trailing" constant="125" id="1Oi-sl-BOc"/>
+                            <constraint firstItem="N5Z-3d-7z7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="FAt-h0-vqM"/>
+                            <constraint firstItem="O30-X7-YD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="JZd-iY-eAL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N5Z-3d-7z7" secondAttribute="trailing" constant="-359" id="YVh-Sc-Wog"/>
+                            <constraint firstItem="N5Z-3d-7z7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ZN0-Wb-OSN"/>
+                            <constraint firstItem="oaq-C1-44J" firstAttribute="top" secondItem="O30-X7-YD1" secondAttribute="bottom" constant="34" id="dS5-9N-hhh"/>
+                            <constraint firstItem="oaq-C1-44J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="diC-xw-f6B"/>
+                            <constraint firstAttribute="trailing" secondItem="O30-X7-YD1" secondAttribute="trailing" constant="13" id="fOh-Dd-zPp"/>
+                            <constraint firstItem="O30-X7-YD1" firstAttribute="top" secondItem="N5Z-3d-7z7" secondAttribute="bottom" constant="23" id="fw3-lF-at8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="CodeSelectSeg" destination="O30-X7-YD1" id="WQD-vO-UZ6"/>
+                        <outlet property="DataField" destination="N5Z-3d-7z7" id="MHZ-Ke-CGX"/>
+                        <outlet property="ImageCodeView" destination="YIy-FF-EQk" id="mdP-jj-EL9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+</document>
